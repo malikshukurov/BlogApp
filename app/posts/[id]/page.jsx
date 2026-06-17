@@ -1,7 +1,7 @@
 import { blogService } from '@/services/blogService';
 import Link from 'next/link';
 import { ArrowLeft, Edit3 } from 'lucide-react';
-import DeleteButton from './DeleteButton'; // Eyni qovluqdakı düymə
+import DeleteButton from '../../../components/DeleteButton'; 
 
 export default async function PostDetailPage({ params }) {
   const { id } = await params;

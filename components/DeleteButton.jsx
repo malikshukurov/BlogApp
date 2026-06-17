@@ -11,8 +11,8 @@ export default function DeleteButton({ postId }) {
   const handleDeleteClick = () => {
     if (confirm('Bu bloq yazısını silmək istədiyinizdən əminsiniz?')) {
       deleteExistingPost(postId, () => {
-        router.push('/'); // Silinəndən sonra ana səhifəyə atır
-        router.refresh(); // Ana səhifənin datasını yeniləyir
+        router.push('/posts'); 
+        router.refresh(); 
       });
     }
   };
