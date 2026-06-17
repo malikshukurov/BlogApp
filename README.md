@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📝 Blog App
 
-## Getting Started
+A modern blog application built with **Next.js 15**, **React**, and **Tailwind CSS** that allows users to create, view, update, and delete blog posts using a real API.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+* View all blog posts
+* Create a new post
+* Update existing posts
+* Delete posts
+* Dynamic post detail pages
+* Responsive UI
+* Loading states
+* Error handling
+* Client-side navigation
+* Modern design
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* Next.js (App Router)
+* React
+* Tailwind CSS
+* JavaScript (ES6+)
+* Fetch API
+* Lucide React
 
-## Learn More
+---
+Operations:
+* GET /posts
+* GET /posts/:id
+* POST /posts
+* PUT /posts/:id
+* DELETE /posts/:id
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📱 Pages
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Home Page
 
-## Deploy on Vercel
+Displays the project introduction and navigation links.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Posts Page
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Shows all available blog posts.
+
+### Post Detail Page
+
+Displays detailed information for a selected post.
+
+### Create Page
+
+Allows users to create a new blog post.
+
+---
+
+## 🎯 Learning Objectives
+
+This project was built to practice:
+
+* Next.js App Router
+* Dynamic Routes
+* CRUD Operations
+* API Integration
+* State Management
+* Component Architecture
+* Custom Hooks
+* Error Handling
+* Responsive Design
+
+---
+
+## 👨‍💻 Author
+Malik Şükürov
+
+
+
+This project is created for educational purposes.
