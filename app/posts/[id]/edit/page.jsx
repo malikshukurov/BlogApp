@@ -1,19 +1,17 @@
 "use client";
-
 import { useState, useEffect, use } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useBlog } from "@/hooks/useBlog";
 import { blogService } from "@/services/blogService";
-import Link from "next/link";
+
 import { ArrowLeft, RefreshCw } from "lucide-react";
 import BlogForm from "@/components/BlogForm"; // Ortaq form
 
 export default function EditPostPage({ params }) {
   const router = useRouter();
-
   const resolvedParams = use(params);
   const id = resolvedParams.id;
-
   const {
     loading: submitLoading,
     error: submitError,
@@ -82,7 +80,7 @@ export default function EditPostPage({ params }) {
 
       <BlogForm
         titleLabel="Bloq Yazısını Redaktə Et"
-        initialData={currentPost} // API-dan gələn datanı bura ötürürük
+        initialData={currentPost} 
         onFormSubmit={handleUpdateSubmit}
         submitLoading={submitLoading}
         submitError={submitError}

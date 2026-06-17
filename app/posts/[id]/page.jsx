@@ -1,8 +1,7 @@
-import { blogService } from '@/services/blogService';
-import Link from 'next/link';
-import { ArrowLeft, Edit3 } from 'lucide-react';
-import DeleteButton from '../../../components/DeleteButton'; 
-
+import { blogService } from "@/services/blogService";
+import Link from "next/link";
+import { ArrowLeft, Edit3 } from "lucide-react";
+import DeleteButton from "../../../components/DeleteButton";
 export default async function PostDetailPage({ params }) {
   const { id } = await params;
   let post = null;
@@ -19,7 +18,10 @@ export default async function PostDetailPage({ params }) {
       <main className="max-w-3xl mx-auto px-4 py-20 text-center">
         <div className="bg-amber-50 border border-amber-200 rounded-xl p-8">
           <p className="text-amber-800 font-semibold mb-4">{errorMsg}</p>
-          <Link href="/" className="inline-flex items-center gap-2 bg-slate-800 text-white px-4 py-2 rounded-lg text-sm">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 bg-slate-800 text-white px-4 py-2 rounded-lg text-sm"
+          >
             <ArrowLeft size={16} /> Ana Səhifəyə Qayıt
           </Link>
         </div>
@@ -30,7 +32,10 @@ export default async function PostDetailPage({ params }) {
   return (
     <main className="max-w-3xl mx-auto px-4 py-12">
       {/* Geri Düyməsi */}
-      <Link href="/" className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900 mb-8 transition-colors">
+      <Link
+        href="/posts"
+        className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900 mb-8 transition-colors"
+      >
         <ArrowLeft size={16} />
         Bloqlara geri qayıt
       </Link>
@@ -45,7 +50,7 @@ export default async function PostDetailPage({ params }) {
         </div>
       </article>
 
-      {/* 🛠️ Düymələr Paneli: EDIT və DELETE */}
+      {/* Düymələr Paneli: EDIT və DELETE */}
       <div className="flex items-center justify-end gap-3 border-t border-slate-200 pt-6">
         {/* EDIT DÜYMƏSİ (Link olaraq edit səhifəsinə aparır) */}
         <Link
@@ -55,7 +60,7 @@ export default async function PostDetailPage({ params }) {
           <Edit3 size={16} />
           Redaktə Et
         </Link>
-        
+
         {/* DELETE DÜYMƏSİ (Client side action işlədir) */}
         <DeleteButton postId={id} />
       </div>
